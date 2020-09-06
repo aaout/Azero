@@ -10,6 +10,14 @@ def as_array(x):
         return np.array(x)
     return x
 
+# pythonの関数っぽく使えるように改変
+# インスタンス生成と呼び出しを同時に行う
+def square(x):
+    return Square()(x)
+
+def exp(x):
+    return Exp()(x)
+
 
 class Variable:
     def __init__(self, data):
